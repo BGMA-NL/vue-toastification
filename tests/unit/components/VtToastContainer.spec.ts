@@ -35,6 +35,8 @@ describe("VtToastContainer", () => {
   beforeEach(() => {
     jest.restoreAllMocks()
     jest.resetAllMocks()
+
+    HTMLElement.prototype.showPopover = jest.fn()
   })
 
   it("snapshots with default value", async () => {

@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`VtToastContainer snapshots with classes 1`] = `
-<div>
+<div
+  popover="manual"
+  style="border: 0px;"
+>
   
   <div>
     <transition-group-stub
@@ -56,7 +59,10 @@ exports[`VtToastContainer snapshots with classes 1`] = `
 `;
 
 exports[`VtToastContainer snapshots with default value 1`] = `
-<div>
+<div
+  popover="manual"
+  style="border: 0px;"
+>
   
   <div>
     <transition-group-stub
@@ -111,7 +117,10 @@ exports[`VtToastContainer snapshots with default value 1`] = `
 `;
 
 exports[`VtToastContainer snapshots with toasts 1`] = `
-<div>
+<div
+  popover="manual"
+  style="border: 0px;"
+>
   
   <div>
     <transition-group-stub

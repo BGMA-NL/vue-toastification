@@ -1,5 +1,5 @@
 <template>
-  <div ref="el">
+  <div ref="el" popover="manual" style="border: 0">
     <div v-for="pos in positions" :key="pos">
       <VtTransition
         :transition="containerProps.transition"
@@ -35,7 +35,7 @@ import type { ToastContainerOptions } from "../types/toastContainer"
 import Toast from "./VtToast.vue"
 import VtTransition from "./VtTransition.vue"
 
-interface ToastContainerProps {
+export interface ToastContainerProps {
   position?: ToastContainerOptions["position"]
   container?: ToastContainerOptions["container"]
   containerClassName?: ToastContainerOptions["containerClassName"]
@@ -116,6 +116,11 @@ const setup = async (
 const setToast = (props: ToastOptionsAndContent) => {
   if (!isUndefined(props.id)) {
     toasts[props.id] = props
+  }
+
+  /* istanbul ignore next */
+  if (el.value) {
+    el.value.showPopover()
   }
 }
 
